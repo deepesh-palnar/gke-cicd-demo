@@ -1,14 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/sapient-depot-412014/gke-repo/quickstart-image', './app1' ]
-  id: 'Build Docker Image'
+  id: 'Build Docker Image demo'
 
   # images:
   # - 'us-central1-docker.pkg.dev/<your_project_id>/gke-repo/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/sapient-depot-412014/gke-repo/quickstart-image' ]
-  id: 'Push Docker Image'
+  id: 'Push Docker Image demo'
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/sapient-depot-412014/gke-repo/flask-image', './app2' ]
